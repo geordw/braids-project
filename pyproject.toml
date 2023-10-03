@@ -1,0 +1,37 @@
+[tool.poetry]
+name = "braids-project"
+version = "0.4.5"
+description = "Code for the paper: 4-strand Burau is unfaithful modulo 5."
+authors = [
+    "Joel Gibson <joel@jgibson.id.au>",
+    "Geordie Williamson <g.williamson@sydney.edu.au>",
+    "Oded Yacobi <oded.yacobi@sydney.edu.au>",
+]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "~3.10"
+numpy = "^1.26.0"
+pandas = "^2.1.1"
+pytest = "^7.4.2"
+ruff = "^0.0.292"
+jupyter = "^1.0.0"
+matplotlib = "^3.8.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+testpaths = [
+    "tests",
+    "peyl",
+]
+addopts = "--doctest-modules"
+
+[tool.ruff]
+select = ["E", "F", "U", "I"]
+ignore = [
+    "E741",  # l is an ambiguous variable name.
+]
+line-length = 180

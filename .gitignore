@@ -1,0 +1,10 @@
+.ipynb_checkpoints
+.pytest_cache
+.ruff_cache
+.venv
+.vscode
+__pycache__
+.idea
+*.db
+*.db-shm
+*.db-wal
