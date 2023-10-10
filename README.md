@@ -2,7 +2,7 @@
 
 Code for the paper *4-strand Burau is unfaithful modulo 5* by Joel Gibson, Geordie Williamson, and Oded Yacobi.
 
-TODO: Insert URL to paper.
+[*4-strand Burau is Unfaithful Modulo 5*](https://arxiv.org/abs/2310.02403)
 
 
 ## Installation
