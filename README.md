@@ -151,6 +151,8 @@ This requires considerably more time and RAM. After roughly 4 hours and using ab
 14  (28, 16)  40000      28       16       0.267857           172867
 ```
 
+(Note that our search above was conducted modulo p=41, however the element found was in fact an integral kernel element. In our experience it is more efficient to search for integral kernel elements in this way, then proceeding directly, due to blow up of coefficients in long products of matrices.)
+
 ## Verify results (Magma)
 
 As alluded above, we have verified our results using the Magma computer algebra system, using the program [`MagmaCheck.m`](MagmaCheck.m).
