@@ -122,6 +122,34 @@ Executed in  321.83 secs    fish           external
 
 As indicated above, the search takes about 6 minutes (and only uses around 200 MB of RAM) on a moderately powered desktop computer.
 
+## Searching for braids (n=6 example)
+
+Reservoir search also manages to show that the integral Burau representation for n=6 is unfaithful. A kernel element (documented in the notebook, and in MagmaCheck.m) is found by the following command:
+
+```shell
+$ poetry run python search.py 6 1 41 --bootstrap-length 3 --step-size 1 --seed 3 --bucket-size 40000 --use-best 100000 --stop-at-projlen-1 --database braids --save-best 10
+```
+(This search should be reproducible with the same caveats as above.)
+
+This requires considerably more time and RAM. After roughly 4 hours and using about 20GB of RAM one is greeted with the following good news:
+```shell
+      bucket  count  length  projlen  rhogap/length  reservoir_count
+0    (28, 1)      1      28        1       0.000000                1
+1    (28, 3)     12      28        3       0.035714               12
+2    (28, 4)     68      28        4       0.053571               68
+3    (28, 5)    336      28        5       0.071429              336
+4    (28, 6)   1078      28        6       0.089286             1078
+5    (28, 7)   3591      28        7       0.107143             3591
+6    (28, 8)  10992      28        8       0.125000            10992
+7    (28, 9)  28274      28        9       0.142857            28274
+8   (28, 10)  40000      28       10       0.160714            89342
+9   (28, 11)  40000      28       11       0.178571           197572
+10  (28, 12)  40000      28       12       0.196429           590944
+11  (28, 13)  40000      28       13       0.214286          1071244
+12  (28, 14)  40000      28       14       0.232143          1299300
+13  (28, 15)  40000      28       15       0.250000           688228
+14  (28, 16)  40000      28       16       0.267857           172867
+```
 
 ## Verify results (Magma)
 
